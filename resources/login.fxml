@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="188.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.LoginController">
+   <children>
+      <Label fx:id="messageLabel" text="login">
+         <font>
+            <Font size="30.0" />
+         </font>
+      </Label>
+      <HBox prefHeight="80.0" prefWidth="400.0">
+         <children>
+            <ToggleButton fx:id="producerButton" mnemonicParsing="false" text="producer">
+               <toggleGroup>
+                  <ToggleGroup fx:id="roleGroup" />
+               </toggleGroup>
+            </ToggleButton>
+            <ToggleButton fx:id="managerButton" mnemonicParsing="false" text="manager" toggleGroup="$roleGroup" />
+         </children>
+      </HBox>
+      <TextField fx:id="IDField" text="ID" />
+      <HBox prefHeight="121.0" prefWidth="384.0">
+         <children>
+            <Button fx:id="loginButton" mnemonicParsing="false" onAction="#handleLogin" text="login" />
+            <Button fx:id="signinbutton" mnemonicParsing="false" text="sign in" />
+         </children>
+      </HBox>
+   </children>
+</VBox>
